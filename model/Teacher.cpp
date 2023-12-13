@@ -5,7 +5,7 @@ class Teacher : public People{
 	public:
 		//setter
 		void setLuong(double Luong){
-			GPA = GPA;
+			Luong = Luong;
 		}
 		//getter
 		double getLuong(){
