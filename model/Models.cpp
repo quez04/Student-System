@@ -39,14 +39,23 @@ class People{
 class Teacher : public People{
 	private:
 		double Luong;
+		int StudentID[5];
 	public:
 		//setter
 		void setLuong(double Luong){
 			Luong = Luong;
 		}
+		void setStudentID(int StudentID[5]){
+			for(int i=0; i<5; i++){
+				StudentID[i] = StudentID[5];
+			}
+		}
 		//getter
 		double getLuong(){
 			return Luong;
+		}
+		int *setStudentID(){
+			return StudentID;
 		}
 };
 // Create model student
