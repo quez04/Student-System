@@ -1,7 +1,10 @@
 #include "People.cpp"
-class Student: public People{
+#include "Teacher.cpp"
+class HocSinh: public Nguoi{
 	private:
 		double GPA;
+		string n;
+		GiangVien a[5];
 	public:
 		//setter
 		void setGPA(double GPA){

@@ -1,5 +1,5 @@
 #include "People.cpp"
-class Teacher : public People{
+class GiangVien : public Nguoi{
 	private:
 		double Luong;
 	public:

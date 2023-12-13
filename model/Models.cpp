@@ -1,41 +1,48 @@
 #include <iostream>
 using namespace std;
-// Create model people
-class People{
+//Tao lop chia se du lieu
+class ChiaseDL{
 	private:
 		int ID;
-		string Hoten;
+		string Ten;
+	public:
+		//setter
+		void setID(int ID){
+			this->ID = ID;
+		}
+		void setTen(string Ten){
+			this->Ten = Ten;
+		}
+		//getter
+		int getID(){
+			return this->ID;
+		}
+		string getTen(){
+			return this->Ten;
+		}
+};
+// Tao lop nguoi
+class People: public ChiaseDL{
+	private:
 		int Tuoi;
 		string SDT;
 	public:
 		//setter
-		void setID(int ID){
-			ID = ID;
-		}
-		void setHoten(string Hoten){
-			Hoten = Hoten;
-		}
 		void setTuoi(int Tuoi){
-			Tuoi = Tuoi;
+			this-> = Tuoi;
 		}
 		void setSDT(string SDT){
-			SDT = SDT;
+			this->SDT = SDT;
 		}
 		//getter
-		int getID(){
-			return ID;
-		}
-		string getHoten(){
-			return Hoten;
-		}
 		int getTuoi(){
-			return Tuoi;
+			return this->uoi;
 		}
 		string getSDT(){
 			return SDT;
 		}
 };
-// Create model teacher
+// Tao lop giang vien
 class Teacher : public People{
 	private:
 		double Luong;
@@ -43,22 +50,22 @@ class Teacher : public People{
 	public:
 		//setter
 		void setLuong(double Luong){
-			Luong = Luong;
+			this->Luong = Luong;
 		}
 		void setStudentID(int StudentID[5]){
-			for(int i=0; i<5; i++){
-				StudentID[i] = StudentID[5];
+			for(int i=0; i<sizeof(StudentID)/sizeof(StudentID[0]); i++){
+				this->StudentID[i] = StudentID[i];
 			}
 		}
 		//getter
 		double getLuong(){
-			return Luong;
+			return this->Luong;
 		}
 		int *setStudentID(){
-			return StudentID;
+			return this->StudentID;
 		}
 };
-// Create model student
+// Tao lop sinh vien
 class Student: public People{
 	private:
 		double GPA;
@@ -67,19 +74,30 @@ class Student: public People{
 	public:
 		//setter
 		void setGPA(double GPA){
-			GPA = GPA;
+			this->GPA = GPA;
 		}
+		
 		void setTeacher(Teacher tch[5]){
-			for(int i=0; i<5; i++){
-				tch[i] = tch[i];
+			for(int i=0; i<sizeof(tch)/sizeof(tch[0]); i++){
+				this->tch[i] = tch[i];
 			}
 		}
 		//getter
 		double getGPA(){
-			return GPA;
+			return this->GPA;
 		}
 		Teacher * getTeacher(){
-			return tch;
+			return this->tch;
 		}
 		
+};
+//Tao lop khoa hoc
+class KhoaHoc{
+	private:
+		double Gio;
+	public:
+		//setter
+		void setGio(double Gio){
+			this->Gio = Gio
+		}
 };

@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-class People{
+class Nguoi{
 	private:
 		int ID;
 		string Hoten;
