@@ -1,36 +1,40 @@
 #include <iostream>
 using namespace std;
+void hienthiluachon(){
+	cout << "\t\t************ He Thong Quan Li Sinh Vien ************"<<endl;
+	cout << "Hay nhap viec ban can lam !" <<endl;
+	cout <<"1 - Sinh Vien" << "\t\t" << "2 - Khoa Hoc" <<endl;
+	cout <<"3 - Giang Vien" << "\t\t" << "4 - Thoat" <<endl;
+}
+void hienthiDS(string gt){
+	cout <<"1 - Them " <<gt<< "\t\t" << "2 - Xoa " <<gt<<endl;
+	cout <<"3 - Chinh sua " <<gt<<"\t\t" << "4 - Hien thi " <<gt<<endl;
+	cout << "5 - Thoat" <<endl;
+}
 int main(){
 	int n;
 	int count = 0;
 	while(true){
-	cout << "\t\t************ He Thong Quan Li Sinh Vien ************"<<endl;
-	cout << "Hay nhap viec ban can lam !" <<endl;
-	cout <<"1 - Them sinh vien" << "\t\t" << "2 - Xoa sinh vien" <<endl;
-	cout <<"3 - Chinh sua sinh vien" << "\t\t" << "4 - Hien thi sinh vien" <<endl;
-	cout << "5 - Thoat" <<endl;
-	cin >> n;
-	switch(n){
-		case 1:
-			cout << "Chon them sinh vien" <<endl;
-			break;
-		case 2:
-			cout << "Chon them sinh vien" <<endl;
-			break;
-		case 3:
-			cout << "Chon them sinh vien" <<endl;
-			break;
-		case 4:
-			cout << "Chon them sinh vien" <<endl;
-			break;
-		case 5:
-			cout << "Chon thoat" <<endl;
-			count = 1;
-			break;
-		default:
-			cout << "Ban da nhap sai ! Hay chon lai" <<endl;
-	}
-	if(count == 1) break;
+		hienthiluachon();
+		cin >> n;
+		switch(n){
+			case 1:
+				hienthiDS("Sinh Vien");
+				break;
+			case 2:
+				hienthiDS("Khoa Hoc");
+				break;
+			case 3:
+				hienthiDS("Giang Vien");
+				break;
+			case 4:
+				cout << "Thoat" <<endl;
+				count = 1;
+				break;
+			default:
+				cout << "Ban da nhap sai ! Hay chon lai" <<endl;
+		}
+		if(count == 1) break;
 	}
 	
 }
