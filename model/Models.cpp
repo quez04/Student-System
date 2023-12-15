@@ -49,7 +49,7 @@ class KhoaHoc: public ChiaseDL{
 	public:
 		//setter
 		void setGio(double Gio){
-			this->Gio = Gio
+			this->Gio = Gio;
 		}
 };
 // Tao lop giang vien
