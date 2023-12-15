@@ -1,5 +1,6 @@
 #include <iostream>
 #include "model/Models.cpp"
+#include "controller/Controller.cpp"
 using namespace std;
 void hienthiluachon(){
 	cout << "\t\t************ He Thong Quan Li Truong Hoc ************"<<endl;
@@ -42,6 +43,8 @@ int main(){
 					double GPA;
 					cin >> GPA; cin.ignore();
 					SV.setGPA(GPA);
+					DkSV dkSV;
+					dkSV.ThemSV(SV);
 					cout << SV.getTen() <<" " << SV.getTuoi() <<" " << SV.getSDT() <<" " << SV.getGPA() <<endl;
 				}
 				break;
